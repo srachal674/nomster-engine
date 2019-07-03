@@ -1,6 +1,7 @@
 <% @places.each do |place| %>
 
 <%= will_paginate @places, previous_label: h("<"), next_label: h(">") %>
+<% end -%>
 
 <!== or custom pagination -->
 <% if @places.previous_page %>
@@ -17,7 +18,5 @@ Page <%= @places.current_page %> of <%= @places.total_pages %>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
   </div>
-
-<% end %>
 
 <% end %>
