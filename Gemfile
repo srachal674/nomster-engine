@@ -71,3 +71,9 @@ gem 'will_paginate', '~> 3.1.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+
+#Simple form
+gem 'simple_form'
+
+#Foundation
+gem 'foundation-rails'

@@ -18,4 +18,8 @@
 //= require popper
 //= require tether
 //= require bootstrap-sprockets
-//= require_tree .
+//= //= require foundation
+$(document).foundation();
+require_tree .
+
+$(function(){ $(document).foundation(); });
