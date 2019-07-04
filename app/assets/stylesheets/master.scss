@@ -33,19 +33,3 @@ body {
   font-family: 'chunkfiveroman', cursive;
   font-size: 26px;  
 }
-
-.navigation {
-  display: inline-block;
-}
-
-.pagination{
-  background: white;
-  cursor: default;
-  height: 22pc;
-  a, span, em{
-    padding: 0.2em 0.5em;
-    display: block;
-    float: center;
-    margin-right: 1px;
-  }
-}
