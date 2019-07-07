@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: nomster_production
   #username: nomster
   #password: <%= ENV['NOMSTER_DATABASE_PASSWORD'] %>
