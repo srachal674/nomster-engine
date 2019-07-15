@@ -1,44 +1,52 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: [ :new, :create ]
-  
-  def index
-    @places = Place.paginate(:page =>params[:page], per_page: 2)
-  end
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+    
+    def index
+      @places = Place.paginate(:page =>params[:page], per_page: 2)
+    end
 
-  def new
-    @place = Place.new
-  end
+    def new
+      @place = Place.new
+    end
 
-  def create
-    current_user.places.create(place_params)
-    redirect_to root_path    
-  end
+    def create
+      current_user.places.create(place_params)
+      redirect_to root_path    
+    end
 
-  def show
+    def show
+      @place = Place.find(params[:id])
+    end
+
+    def edit
+      @place = Place.find(params[:id])
+
+      if @place.user != current_user
+        return render plan: 'Not Allowed', status: :forbidden
+      end
+    end
+
+  def update
     @place = Place.find(params[:id])
+    if @place.user != current_user
+      return render plan: 'Not Allowed', status: :forbidden
+    end
+    
+    @place.update_attributes(place_params)
+    redirect_to root_path
   end
 
-  def edit
+  def destroy
     @place = Place.find(params[:id])
+    @place.destroy
+    redirect_to root_path
   end
 
-def update
-  @place = Place.find(params[:id])
-  @place.update_attributes(place_params)
-  redirect_to root_path
-end
 
-def destroy
-  @place = Place.find(params[:id])
-  @place.destroy
-  redirect_to root_path
-end
+    private
 
-
-  private
-
-  def place_params
-    params.require(:place).permit(:name, :description, :address)
-  end
+    def place_params
+      params.require(:place).permit(:name, :description, :address)
+    end
 
 end
