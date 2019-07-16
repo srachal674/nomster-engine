@@ -53,6 +53,11 @@ class PlacesController < ApplicationController
       redirect_to root_path
   end
 
+  def address
+    [street, city, state].compact.join(', ')
+    include Geocoder::Model::Mongoid
+  end
+
     private
 
     def place_params
