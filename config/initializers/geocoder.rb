@@ -1,5 +1,5 @@
 Geocoder.configure(
-  (lookup: :google_premier, api_key: [key, client, channel])
+  lookup: :google_premier, api_key: [:key, :client, :channel]
   # Geocoding options
   # timeout: 3,                 # geocoding service timeout (secs)
   # lookup: :nominatim,         # name of geocoding service (symbol)
