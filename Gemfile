@@ -75,8 +75,14 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
+##Font manager
 gem "font-awesome-rails"
 
+##Email manager
 gem 'devise'
 
-gem 'mainstreet'
+##Geocode converter
+gem 'geocoder'
+
+##Personal data protector
+gem 'figaro'
