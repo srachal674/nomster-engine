@@ -1,7 +1,7 @@
 class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :place 
-end
+  
     def change
       create_table :comments do |t|
         t.text :message
