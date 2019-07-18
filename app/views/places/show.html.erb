@@ -39,10 +39,25 @@
   </div>
 
 </div>
+<br/>
 
-<div class="clear"></div>
+<div class="clear booyah-box col-10 offset-1" >
 <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
   <%= f.input :message %>
   <%= f.input :rating %>
   <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+<% end %>
+</div>
+<br/>
+
+<h1>Comments</h1>
+<br/>
+<% @place.comments.each do |comment| %>
+  <div>
+    <blockquote>
+      <b><h2><%= comment.rating %></b> -
+        <%= comment.message %> &nbsp
+      <small><%= comment.user.email %></small></h2>
+    </blockquote>
+  </div>
 <% end %>
