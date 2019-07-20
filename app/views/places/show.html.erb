@@ -26,7 +26,9 @@
   <br />
 
   <div id="map"></div>
-  
+
+<% if @place.latitude.present? && @place.longitude.present? %>
+
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlysryNfuxkZ1G4nxLJPfYHfQpFXsuhSw&callback=initMap">
   </script>
