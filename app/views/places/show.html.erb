@@ -90,3 +90,10 @@
       </div>
     <% end %>
   </div>
+
+  <% @place.photos.each do |photo| %>
+    <%= simple_form_for @photo, url: "place_photos_path(@place)" do |f| %>
+      <%= f.input :message %>
+      <%= f.submit "Add an image", class: 'btn btn-primary' %>
+    <% end %>
+  <% end %>
