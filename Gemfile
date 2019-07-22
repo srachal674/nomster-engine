@@ -86,3 +86,6 @@ gem 'geocoder'
 
 ##Personal data protector
 gem 'figaro'
+
+##Image handler
+gem 'carrierwave'
