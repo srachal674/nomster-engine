@@ -89,3 +89,6 @@ gem 'figaro'
 
 ##Image handler
 gem 'carrierwave'
+
+gem 'fog-aws'
+
