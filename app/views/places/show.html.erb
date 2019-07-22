@@ -4,7 +4,6 @@
   <br/> <br/>
   <p><%= @place.description %></p>
 
-<% if @place.latitude.present? && @place.longitude.present? %>
   
   <script>
 
@@ -24,14 +23,14 @@
     }
   </script>
 
-<br />
+  <br />
+
+  <div id="map"></div>
+  
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlysryNfuxkZ1G4nxLJPfYHfQpFXsuhSw&callback=initMap">
   </script>
   
-  <div id="map"></div>
-<% end %>
-
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
@@ -91,3 +90,10 @@
       </div>
     <% end %>
   </div>
+
+  <% @place.photos.each do |photo| %>
+    <%= simple_form_for @photo, url: "place_photos_path(@place)" do |f| %>
+      <%= f.input :message %>
+      <%= f.submit "Add an image", class: 'btn btn-primary' %>
+    <% end %>
+  <% end %>
