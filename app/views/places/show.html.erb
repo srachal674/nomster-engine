@@ -104,7 +104,7 @@
       </div>
 
   <div class="modal-body">   
-    <%= simple_form_for @photo, url: 'place_photos_path(@place)' do |f| %>
+    <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
       <%= f.input :caption %>
       <%= f.input :picture %>
       <%= f.submit "Add image", class: 'btn btn-primary' %>
