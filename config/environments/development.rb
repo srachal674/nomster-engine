@@ -1,16 +1,16 @@
 Rails.application.configure do
   config.action_mailer.delivery_method = :stmp
 
-  config.action_mailer.stmp_settings = {
+  config.action_mailer.stmp_settings ={
     address: "stmp.gmail.com",
     port: 587,
-    domain: "example.com"
+    domain: "example.com",
     authentication:"plain",
     enable_starttls_auto: true,
     user_name: ENV['GMAIL_ADDRESS'],
     password: ENV['GMAIL_PASSWORD']
   }
-  
+
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.default_url_options = { host: 'localhost:3030'}
   
