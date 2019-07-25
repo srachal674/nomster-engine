@@ -123,6 +123,6 @@
 
   <div class="row">
     <% @place.photos.each do |photo| %>
-      <%= image_tag photo.picture.url %>
+      <%= image_tag photo.picture.url, :width => 600 %>
     <% end %>
   </div>
