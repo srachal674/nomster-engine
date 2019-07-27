@@ -1,1 +1,9 @@
-<h1>User Dashboard</h1>
+<div class="top">
+  <h1><%= @user.email %></h1>
+</div>
+
+<br/>
+
+<h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+<h3>Total Comments: <%= @user.comments.count %></h3>
+<h3>Total Reviews: <%= @user.comments.count %></h3>

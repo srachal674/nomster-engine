@@ -39,18 +39,22 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
   padding-left: 2%;
+  font-size: 24px;
 }
 h2{
   padding-left: 4%;
   font-size: 20px;
 }
-/*h3{
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-}*/
+
+h3{
+  font-size: 20px;
+  padding-left: 4%;
+}
+
+h4{
+  font-size: 18px;
+  padding-left: 4%;
+}
 
 .size{
     max-width: 2500px;
@@ -166,6 +170,10 @@ blockquote p{
 
 .carousel{
   box-shadow: 0px 3px 8px #204060;
+}
+
+.top{
+  margin-top: 1%;
 }
 /*.center{
   display: block;
