@@ -5,12 +5,32 @@
   -moz-box-shadow: 1px 1px 2px 0 #204060;
   -webkit-box-shadow: 1px 1px 2px 0 #204060;
   box-shadow: 8px 8px 12px 0 #204060;
-  background: #fff;
+  background: image_url('brushed_alu_dark.png');
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+}
+
+/* unvisited link */
+a:link {
+  color: #00134d;
+}
+
+/* visited link */
+a:visited {
+  color: #00134d;
+}
+
+/* mouse over link */
+a:hover {
+  color: #003366;
+}
+
+/* selected link */
+a:active {
+  color: blue;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -24,13 +44,13 @@ h2{
   padding-left: 4%;
   font-size: 20px;
 }
-h3{
+/*h3{
   text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-}
+}*/
 
 .size{
     max-width: 2500px;
@@ -127,7 +147,26 @@ blockquote p{
   line-height: 1;
 }
 
-.carousel
+.carousel-item.active, 
+.carousel-item-next, 
+.carousel-item-prev {
+  display: block;
+}
+
+.carousel-caption{
+  font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  font-size: 60px;
+  font-weight: 100;
+  text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.carousel{
+  box-shadow: 0px 3px 8px #204060;
+}
 /*.center{
   display: block;
   margin-left: auto;
