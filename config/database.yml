@@ -25,8 +25,15 @@ default: &default
   host: localhost
 
 development:
-  <<: *default
+  development:
+  adapter: postgresql
+  encoding: unicode
   database: nomster_development
+  pool: 5
+  username: postgres
+  password: passw0rd
+  host: localhost
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
